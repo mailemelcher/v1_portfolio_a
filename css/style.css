@@ -1,0 +1,323 @@
+/********************************
+Bootstrap Variables Override
+**********************************/
+:root {
+    /* Replace your primary color from your UI Kit */
+    --bs-primary: #7C9970;
+
+    /* Replace your secondary color from your UI Kit  */
+    --secondary-color: #9AB19B;
+
+    --bs-accent: #C8A7A7;
+
+    --bs-line: #
+
+    /* Replace the main body font from your UI Kit */
+    --bs-font-sans-serif: 'Inter', verdana, sans-serif;
+
+    /* Optional: Replace gradient from your UI Kit */
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+
+    --bg-color: #FFFFFF;
+}
+
+/********************************
+Global Styles and UI Components
+**********************************/
+.navbar {
+
+    /* Optional: Stretch the navbar across the full width */
+    width: 100%;
+
+    /* Optional: Add inner spacing to the navbar */
+    padding: 1rem;
+}
+
+footer {
+    /* Change footer background color */
+    background-color: var(--bs-white);
+    /* Optional: Change footer text color to white using variable */
+    color: var(--bs-dark);
+    /* Optional: Center footer elements */
+    text-align: center;
+}
+
+footer .footer-social {
+    /* Optional: Change size of footer icon */
+    width:24px;
+    margin:.5rem
+}
+
+.btn-primary {
+    /* Optional: Change primary button background color to primary color */
+    background-color: var(--bs-primary);
+    /* Optional: Remove primary button outline */
+    border: none;
+}
+
+.btn-primary:hover {
+    /* Optional: Change primary button hover state background and text color  */
+    background-color: var(--secondary-color);
+    color: var(--bs-dark);
+}
+
+/********************************
+Typography
+**********************************/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+      font-family: "Lustria", serif;
+      
+    /* Optional: Add letter spacing to all headings */
+    letter-spacing: 0.0rem;
+    /* Optional: Adjust font-weight to all headings */
+    font-weight: 800;
+}
+
+h2 {
+    /* Optional: Adjust font-size of heading 2 */
+    font-size: 2rem;
+}
+
+.display-1 {
+    /* Optional: Customizes display-1 style based on my Figma UI kit */
+    font-weight: 800;
+    font-size: 4.5rem;
+    line-height: 100%;
+    letter-spacing: -0.2rem;
+}
+
+.display-2 {
+    /* Optional: Customizes display-2 style based on my Figma UI kit */
+    font-weight: 700;
+    font-size: 2.75rem;
+    line-height: 100%;
+    letter-spacing: -0.2rem;
+}
+
+.kicker {
+    /* Optional: Establish new custom text style class called "kicker" */
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+
+.lustria-regular {
+  font-family: "Lustria", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    /* Optional: Customize responsive style for display-1 on small devices and larger */
+    .display-1 {
+        font-size: 4rem;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.hero {
+    /* width: 1320px; */
+    margin: 0 auto;
+}
+
+section {
+    padding: 6em 0;
+}
+
+footer {
+    background-color: var(--secondary-color);
+}
+
+svg {
+    color: #333;
+    width: 25px;
+    height: 25px;
+    padding: .2em;
+}
+
+.text-centered {
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+
+/* GRID */
+.row {
+    --gridgap: 2em;
+}
+.row2 {
+    --gridgap2: 0em;
+}
+.row>* {
+    margin-top: var(--gridgap);
+    margin-bottom: var(--gridgap);
+}
+.row2 + .row2 {
+    margin-top: var(--gridgap2);
+    margin-bottom: var(--gridgap2);
+}
+@media (min-width: 768px) {
+    .row {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: var(--gridgap);
+        /* place-items: center; */
+    }
+
+    /* COMMONLY USED SEMANTIC COLUMN WIDTHS */
+    .one-half {
+        grid-column: auto / span 6;
+    }
+
+    .one-third {
+        grid-column: auto / span 4;
+    }
+
+    .two-thirds {
+        grid-column: auto / span 8;
+    }
+
+    .one-fourth {
+        grid-column: auto / span 3;
+    }
+
+    .three-fourths {
+        grid-column: auto / span 9;
+    }
+
+    /* 12 COLUMN CLASSES */
+    .col-1 {
+        grid-column: auto / span 1;
+    }
+
+    .col-2 {
+        grid-column: auto / span 2;
+    }
+
+    .col-3 {
+        grid-column: auto / span 3;
+    }
+
+    .col-4 {
+        grid-column: auto / span 4;
+    }
+
+    .col-5 {
+        grid-column: auto / span 5;
+    }
+
+    .col-6 {
+        grid-column: auto / span 6;
+    }
+
+    .col-7 {
+        grid-column: auto / span 7;
+    }
+
+    .col-8 {
+        grid-column: auto / span 8;
+    }
+
+    .col-9 {
+        grid-column: auto / span 9;
+    }
+
+    .col-10 {
+        grid-column: auto / span 10;
+    }
+
+    .col-11 {
+        grid-column: auto / span 11;
+    }
+
+    .col-12 {
+        grid-column: auto / span 12;
+    }
+
+    /* COMMONLY CENTERED COLUMNS */
+    .one-half.centered {
+        grid-column: 4 / span 6;
+    }
+
+    .one-third.centered {
+        grid-column: 5 / span 4;
+    }
+
+    .two-thirds.centered {
+        grid-column: 3 / span 8;
+    }
+
+    /* PUSHES */
+    .push-1 {
+        grid-column-start: 2;
+    }
+
+    .push-2 {
+        grid-column-start: 3;
+    }
+
+    .push-3 {
+        grid-column-start: 4;
+    }
+
+    .push-4 {
+        grid-column-start: 5;
+    }
+
+    .push-5 {
+        grid-column-start: 6;
+    }
+
+    .push-6 {
+        grid-column-start: 7;
+    }
+
+    .push-7 {
+        grid-column-start: 8;
+    }
+
+    .push-8 {
+        grid-column-start: 9;
+    }
+
+    .push-9 {
+        grid-column-start: 10;
+    }
+
+    .push-10 {
+        grid-column-start: 11;
+    }
+
+    .push-11 {
+        grid-column-start: 12;
+    }
+
+    /* SWAP (REVERSE) COLUMNS - WORKS ONLY w/ 2 CHILDREN  */
+    .row.swapped > *:first-child { order: 2; }
+    .row.swapped > *:last-child { order: 1; }
+}
+
+@media (min-width: 768px) {
+.social-links {
+    display: flex;
+    justify-content: end;
+    padding: 5em 0 0 0;
+    
+}
+    }
+
+body {
+    background-color: var(--bg-color);
+}
