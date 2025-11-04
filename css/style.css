@@ -6,14 +6,22 @@ Bootstrap Variables Override
     --bs-primary: #7C9970;
 
     /* Replace your secondary color from your UI Kit  */
-    --secondary-color: #9AB19B;
+    --bs-secondary: #9AB19B;
 
     --bs-accent: #C8A7A7;
 
-    --bs-line: #
+    --bs-line: #303030;
+
+    --bs-white-text: #FFFFFF;
+
+    --bs-grey-text: #303030;
+
+    --bs-black-text: #000000;
+    
+    --bs-lightgrey: #E3E2E2;
 
     /* Replace the main body font from your UI Kit */
-    --bs-font-sans-serif: 'Inter', verdana, sans-serif;
+
 
     /* Optional: Replace gradient from your UI Kit */
     --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
@@ -24,18 +32,44 @@ Bootstrap Variables Override
 /********************************
 Global Styles and UI Components
 **********************************/
+
+/* --------- NAVIGATION BAR --------- */
 .navbar {
-
-    /* Optional: Stretch the navbar across the full width */
-    width: 100%;
-
-    /* Optional: Add inner spacing to the navbar */
-    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 3rem;
 }
 
+.navbar .navbar_menu {
+    list-style: none;
+    display: flex;
+    gap: 3rem;      
+    margin: 0;
+    padding-right: 2rem;
+}
+
+.navbar .navbar_menu li{
+    width: 158px;
+    height: 48px;
+}
+
+.navbar .navbar_menu li a{
+    text-decoration: none;
+    color: #C8A7A7;
+    font-family: 'NATS', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9rem;
+    height: 3rem;
+    border-radius: 8px;
+}
+
+/* --------- FOOTER --------- */
 footer {
     /* Change footer background color */
-    background-color: var(--bs-white);
+    background-color: var(--bs-primary);
     /* Optional: Change footer text color to white using variable */
     color: var(--bs-dark);
     /* Optional: Center footer elements */
@@ -50,7 +84,7 @@ footer .footer-social {
 
 .btn-primary {
     /* Optional: Change primary button background color to primary color */
-    background-color: var(--bs-primary);
+    background-color: var(--bs-accent);
     /* Optional: Remove primary button outline */
     border: none;
 }
@@ -60,6 +94,8 @@ footer .footer-social {
     background-color: var(--secondary-color);
     color: var(--bs-dark);
 }
+
+
 
 /********************************
 Typography
@@ -71,13 +107,33 @@ h4,
 h5,
 h6 {
 
-      font-family: "Lustria", serif;
+    /* Apply Lustria sitewide, except navigation and buttons */
+body {
+  background-color: var(--bg-color);
+  font-family: "Lustria", serif;
+}
+
+/* Apply NATS for navigation and buttons */
+.navbar a,
+.navbar_menu a,
+.btn,
+button,
+a {
+  font-family: 'NATS', sans-serif;
+}
       
     /* Optional: Add letter spacing to all headings */
     letter-spacing: 0.0rem;
     /* Optional: Adjust font-weight to all headings */
     font-weight: 800;
 }
+
+header {
+  margin: 0;
+  padding: 0;
+  height: 0;
+}
+
 
 h2 {
     /* Optional: Adjust font-size of heading 2 */
@@ -126,19 +182,6 @@ img {
     height: auto;
 }
 
-.hero {
-    /* width: 1320px; */
-    margin: 0 auto;
-}
-
-section {
-    padding: 6em 0;
-}
-
-footer {
-    background-color: var(--secondary-color);
-}
-
 svg {
     color: #333;
     width: 25px;
@@ -151,6 +194,9 @@ svg {
 }
 .text-left {
     text-align: left;
+}
+.text-right {
+    text-align: right;
 }
 
 /* GRID */
@@ -318,19 +364,85 @@ svg {
 }
     }
 
-body {
-    background-color: var(--bg-color);
+
+
+/* -------- HERO SECTION -------- */
+
+.hero {
+/* width: 1320px; */
+  margin: 0 auto;
 }
 
-.hero-logo{
-        background-color: var(--bs-primary);
+.hero-logo {
+    padding: 2rem;             /* your spacing inside green block */
+    flex: 1;                   /* left green block takes half */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    /* vertical centering */
+    background-color: var(--bs-primary);
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 2rem;         /* optional for spacing */
+    gap: 2rem;                    /* spacing between logo and button */
 }
 
-.rightquote, .leftquote{
+
+.hero-section {
+    display: flex;
+    align-items: center;       /* vertically center the row content */
+}
+
+.hero-text {
+    flex: 1;                   /* right text takes remaining half */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    /* vertical centering */
+    text-align: left;
+    gap: 0.5rem;               /* spacing between lines */
+}
+
+.hero-text .line1,
+.hero-text .line2 {
+    margin: 0;
+}
+
+
+
+.leftquote {
     font-size: 3em;
+    margin-right: 0em; /* bring closer to text */
+    vertical-align: top;  /* optional: align better with first line */
+}
+
+.rightquote {
+    font-size: 5em;
+    margin-left: 0.25em;  /* bring closer to text */
+    vertical-align: bottom; /* optional: align better with last line */
 }
 
 .mm-logo{
     width: 50%;
-    padding: 25px;
+    padding: 30px;
+}
+
+.white-text {
+  color: white;
+}
+
+.btn-pink {
+  background-color: var(--bs-accent); /* your pink */
+  color: #FFFFFF;                     /* white text */
+  border: none;                       /* no stroke */
+  border-radius: 5px;                 /* rounded corners */
+  padding: 0.5rem 1.5rem;             /* adjust size */
+  font-family: 'NATS', sans-serif;    /* match your buttons */
+  font-weight: 600;                   /* optional */
+  text-align: center;                 /* center text */
+  cursor: pointer;                    /* pointer on hover */
+  transition: background-color 0.3s;  /* smooth hover effect */
+}
+
+.btn-pink:hover {
+  background-color: lighten(var(--bs-accent), 10%); /* slightly lighter on hover */
 }
