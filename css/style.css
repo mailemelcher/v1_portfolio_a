@@ -12,6 +12,7 @@ Bootstrap Variables Override
     --bs-grey-text: #303030;
     --bs-black-text: #000000;
     --bs-lightgrey: #E3E2E2;
+    --ltpink:#d8bfbf;
 
     --bg-color: #FFFFFF;
 
@@ -32,8 +33,8 @@ Global Styles and UI Components
 .navbar {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
-    padding-right: 3rem;
+    /* align-items: left; */
+    /* padding-right: 3rem; */
 }
 
 .navbar .navbar_menu {
@@ -42,10 +43,11 @@ Global Styles and UI Components
     gap: 3rem;      
     margin: 0;
     padding-right: 2rem;
+    /* border-bottom: 1px solid var(--bs-black-text); */
 }
 
 .navbar .navbar_menu li{
-    width: 158px;
+    width: 232px;
     height: 48px;
 }
 
@@ -69,6 +71,15 @@ html, body {
     margin: 0;
     padding: 0;
 }
+.hero-section {
+    margin-left: 0em;
+}
+
+@media (min-width: 768px) {
+    .hero-section {
+        margin-left: 3em;
+    }
+}
 
 .hero-section > .row {
     margin: 0; /* removes default row spacing */
@@ -78,7 +89,8 @@ html, body {
     margin-top: 0; 
     margin-bottom: 0;
     display: flex;
-    align-items: center;       /* vertically center the row content */
+    /* align-items: center;       vertically center the row content */
+
 }
 
 .hero {
@@ -96,6 +108,9 @@ html, body {
     justify-content: center;    /* vertical centering */
     background-color: var(--bs-primary);
     gap: 2rem;                    /* spacing between logo and button */
+
+    border-left: 2em solid var(--ltpink);
+    border-right: 2em solid var(--ltpink);
 }
 
 .mm-logo{
@@ -108,24 +123,24 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: center;    /* vertical centering */
+    align-items: flex-start;
     text-align: left;
     gap: 0.5rem;               /* spacing between lines */
 }
 
 .hero-text .line1 {            /* "Inspired by Nature" */
     font-family: "Lustria", serif;
-    font-size: 30px;
+    font-size: 3em;
     color: #7C9970;
     margin: 0;
 }
 
 .hero-text .line2 {             /* "I am to create designs that feel grounded..." */
     font-family: "Lustria", serif;
-    font-size: 20px;
+    font-size: 1.8em;
     color: #9AB19B;
     margin: 0;
 }
-
 
 .leftquote {
     font-size: 3em;
@@ -135,6 +150,14 @@ html, body {
     font-size: 5em;
 }
 
+
+._line {
+    border-top: 1px solid var(--bs-black-text);
+    border-bottom: 1px solid var(--bs-black-text);
+    width: 95%;
+    padding: 20% 0;
+    margin: 3em 0;
+}
 /* ------- PINK BUTTON ------- */
 .btn-pink {
   background-color: var(--bs-accent); /* original pink */
@@ -150,7 +173,7 @@ html, body {
 }
 
 .btn-pink:hover {
-  background-color: #d8bfbf; /* manually lighter pink */
+  background-color: var(--ltpink) /* manually lighter pink */
 }
 
 .btn-icon {
@@ -207,6 +230,15 @@ h6 {
   font-style: normal;
 }
 
+p {
+    margin-bottom: 2rem;
+}
+
+.m-bottom {
+    margin-bottom: 10rem;
+}
+
+
     /* Apply Lustria sitewide, except navigation and buttons */
 body {
   background-color: var(--bg-color);
@@ -221,7 +253,6 @@ button,
 a {
   font-family: 'NATS', sans-serif;
 }
-      
     /* Optional: Add letter spacing to all headings */
     letter-spacing: 0.0rem;
     /* Optional: Adjust font-weight to all headings */
@@ -305,7 +336,12 @@ svg {
     text-align: right;
 }
 
-
+/********************************
+Helpers
+**********************************/
+.caps {
+    text-transform: uppercase;
+}
 
 
 /* ------------ GRID ------------ */
@@ -476,3 +512,24 @@ svg {
     
 }
     }
+
+    
+
+.inspiration._line> .row>*{
+    margin: 0;
+    padding: 0;
+}
+
+.green {
+    color: var(--bs-primary);
+}
+
+.icons{
+    width: 60%;
+    columns: 2;
+}
+
+.icons img {
+    padding-top: 1em;
+    /* padding-bottom: 1em; */
+}
