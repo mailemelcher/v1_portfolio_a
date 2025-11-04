@@ -1,33 +1,28 @@
 /********************************
 Bootstrap Variables Override
 **********************************/
+
 :root {
     /* Replace your primary color from your UI Kit */
     --bs-primary: #7C9970;
-
-    /* Replace your secondary color from your UI Kit  */
     --bs-secondary: #9AB19B;
-
     --bs-accent: #C8A7A7;
-
     --bs-line: #303030;
-
     --bs-white-text: #FFFFFF;
-
     --bs-grey-text: #303030;
-
     --bs-black-text: #000000;
-    
     --bs-lightgrey: #E3E2E2;
 
-    /* Replace the main body font from your UI Kit */
+    --bg-color: #FFFFFF;
 
+    /* Replace the main body font from your UI Kit */
+    --bs-lustria:
+    --bs-nats: 
 
     /* Optional: Replace gradient from your UI Kit */
     --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-
-    --bg-color: #FFFFFF;
 }
+
 
 /********************************
 Global Styles and UI Components
@@ -65,6 +60,105 @@ Global Styles and UI Components
     height: 3rem;
     border-radius: 8px;
 }
+
+
+
+/* -------- HERO SECTION -------- */
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.hero-section > .row {
+    margin: 0; /* removes default row spacing */
+}
+
+.hero-section > .row > * {
+    margin-top: 0; 
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;       /* vertically center the row content */
+}
+
+.hero {
+/* width: 1320px; */
+  margin: 0 auto;
+}
+
+.hero-logo {                   /* Green logo box area */
+    margin-top: 0;
+    padding: 0 0rem 0rem 0rem; /* top 0, sides 2rem, bottom 2rem */
+    flex: 1;                   /* left green block takes half */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    /* vertical centering */
+    background-color: var(--bs-primary);
+    gap: 2rem;                    /* spacing between logo and button */
+}
+
+.mm-logo{
+    width: 45%;
+    padding-top: 30px;
+}
+
+.hero-text {
+    flex: 1;                   /* right text takes remaining half */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    /* vertical centering */
+    text-align: left;
+    gap: 0.5rem;               /* spacing between lines */
+}
+
+.hero-text .line1 {            /* "Inspired by Nature" */
+    font-family: "Lustria", serif;
+    font-size: 30px;
+    color: #7C9970;
+    margin: 0;
+}
+
+.hero-text .line2 {             /* "I am to create designs that feel grounded..." */
+    font-family: "Lustria", serif;
+    font-size: 20px;
+    color: #9AB19B;
+    margin: 0;
+}
+
+
+.leftquote {
+    font-size: 3em;
+}
+
+.rightquote {
+    font-size: 5em;
+}
+
+/* ------- PINK BUTTON ------- */
+.btn-pink {
+  background-color: var(--bs-accent); /* original pink */
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1.5rem;
+  font-family: 'NATS', sans-serif;
+  font-weight: 550;
+  text-align: center;
+  cursor: pointer;
+  transition: filter 0.3s;  /* smooth hover effect */
+}
+
+.btn-pink:hover {
+  background-color: #d8bfbf; /* manually lighter pink */
+}
+
+.btn-icon {
+  width: 17px;
+  height: auto;  /* maintains original aspect ratio */
+  margin-right: 8px;   /* space between icon and text */
+}
+
 
 /* --------- FOOTER --------- */
 footer {
@@ -106,6 +200,12 @@ h3,
 h4,
 h5,
 h6 {
+
+.lustria-regular {
+  font-family: "Lustria", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
     /* Apply Lustria sitewide, except navigation and buttons */
 body {
@@ -163,12 +263,6 @@ h2 {
     font-size: 1.25rem;
 }
 
-.lustria-regular {
-  font-family: "Lustria", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
     /* Optional: Customize responsive style for display-1 on small devices and larger */
@@ -183,12 +277,24 @@ img {
 }
 
 svg {
-    color: #333;
+    color: var(--bs-grey-text);
     width: 25px;
     height: 25px;
     padding: .2em;
 }
 
+
+.small-line-dash {
+  display: inline-block;       /* make it render like a small block inline */
+  width: 25px;                 /* length of the dash */
+  height: 1px;                 /* thickness of the dash */
+  background-color: #303030;   /* color of the dash */
+  margin-left: 0.5rem;         /* space between text and line */
+  vertical-align: middle;      /* aligns line with text */
+}
+
+
+/* ------ TEXT ALIGNMENT ------ */
 .text-centered {
     text-align: center;
 }
@@ -199,7 +305,10 @@ svg {
     text-align: right;
 }
 
-/* GRID */
+
+
+
+/* ------------ GRID ------------ */
 .row {
     --gridgap: 2em;
 }
@@ -222,6 +331,10 @@ svg {
         /* place-items: center; */
     }
 
+
+
+
+/* -------------- G R I D S -------------- */
     /* COMMONLY USED SEMANTIC COLUMN WIDTHS */
     .one-half {
         grid-column: auto / span 6;
@@ -363,86 +476,3 @@ svg {
     
 }
     }
-
-
-
-/* -------- HERO SECTION -------- */
-
-.hero {
-/* width: 1320px; */
-  margin: 0 auto;
-}
-
-.hero-logo {
-    padding: 2rem;             /* your spacing inside green block */
-    flex: 1;                   /* left green block takes half */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;    /* vertical centering */
-    background-color: var(--bs-primary);
-    margin-top: 0;
-    padding-top: 0;
-    padding-bottom: 2rem;         /* optional for spacing */
-    gap: 2rem;                    /* spacing between logo and button */
-}
-
-
-.hero-section {
-    display: flex;
-    align-items: center;       /* vertically center the row content */
-}
-
-.hero-text {
-    flex: 1;                   /* right text takes remaining half */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;    /* vertical centering */
-    text-align: left;
-    gap: 0.5rem;               /* spacing between lines */
-}
-
-.hero-text .line1,
-.hero-text .line2 {
-    margin: 0;
-}
-
-
-
-.leftquote {
-    font-size: 3em;
-    margin-right: 0em; /* bring closer to text */
-    vertical-align: top;  /* optional: align better with first line */
-}
-
-.rightquote {
-    font-size: 5em;
-    margin-left: 0.25em;  /* bring closer to text */
-    vertical-align: bottom; /* optional: align better with last line */
-}
-
-.mm-logo{
-    width: 50%;
-    padding: 30px;
-}
-
-.white-text {
-  color: white;
-}
-
-.btn-pink {
-  background-color: var(--bs-accent); /* your pink */
-  color: #FFFFFF;                     /* white text */
-  border: none;                       /* no stroke */
-  border-radius: 5px;                 /* rounded corners */
-  padding: 0.5rem 1.5rem;             /* adjust size */
-  font-family: 'NATS', sans-serif;    /* match your buttons */
-  font-weight: 600;                   /* optional */
-  text-align: center;                 /* center text */
-  cursor: pointer;                    /* pointer on hover */
-  transition: background-color 0.3s;  /* smooth hover effect */
-}
-
-.btn-pink:hover {
-  background-color: lighten(var(--bs-accent), 10%); /* slightly lighter on hover */
-}
