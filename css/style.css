@@ -158,6 +158,7 @@ html, body {
     padding: 20% 0;
     margin: 3em 0;
 }
+
 /* ------- PINK BUTTON ------- */
 .btn-pink {
   background-color: var(--bs-accent); /* original pink */
@@ -181,6 +182,48 @@ html, body {
   height: auto;  /* maintains original aspect ratio */
   margin-right: 8px;   /* space between icon and text */
 }
+
+
+
+/* --------- ABOUT ---------- */
+.about-photo-section {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.about-photo {
+  width: 100%;
+  height: auto;
+  max-width: 458px;    /* keeps consistent sizing like before */
+  border-radius: 0px;  /* optional — adds a soft curve to match your aesthetic */
+  display: block;
+  margin: 0 auto;
+}
+
+
+.hobby-icons {
+  display: flex;
+  gap: 1rem; /* space between icons */
+  margin-bottom: 3rem;
+}
+
+.hobby-icons img {
+  width: 55px;
+  height: 55px;
+}
+
+
+.skill-icons {
+  display: flex;
+  gap: 1rem; /* space between icons */
+  margin-bottom: 3rem;
+}
+
+.skill-icons img {
+  width: 55px;
+  height: 55px;
+}
+
 
 
 /* --------- FOOTER --------- */
@@ -312,16 +355,6 @@ svg {
     width: 25px;
     height: 25px;
     padding: .2em;
-}
-
-
-.small-line-dash {
-  display: inline-block;       /* make it render like a small block inline */
-  width: 25px;                 /* length of the dash */
-  height: 1px;                 /* thickness of the dash */
-  background-color: #303030;   /* color of the dash */
-  margin-left: 0.5rem;         /* space between text and line */
-  vertical-align: middle;      /* aligns line with text */
 }
 
 
@@ -522,6 +555,10 @@ Helpers
 
 .green {
     color: var(--bs-primary);
+}
+
+.teal {
+    color: var(--bs-secondary);
 }
 
 .icons{
