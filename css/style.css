@@ -192,9 +192,7 @@ html, body {
 }
 
 .about-photo {
-  width: 100%;
-  height: auto;
-  max-width: 458px;    /* keeps consistent sizing like before */
+  /* max-width: 458px;    keeps consistent sizing like before */
   border-radius: 0px;  /* optional — adds a soft curve to match your aesthetic */
   display: block;
   margin: 0 auto;
@@ -202,27 +200,26 @@ html, body {
 
 
 .hobby-icons {
-  display: flex;
-  gap: 1rem; /* space between icons */
-  margin-bottom: 3rem;
+  /* display: flex; */
+  /* gap: 1rem; space between icons */
+  /* margin-bottom: 3rem; */
+  /* width: 50%; */
+  columns: 2;
+  padding: 0 1em;
+  margin: 0 1em;
+  width: 60%;
 }
 
-.hobby-icons img {
-  width: 55px;
-  height: 55px;
-}
-
-
-.skill-icons {
+/* .skill-icons {
   display: flex;
-  gap: 1rem; /* space between icons */
+  gap: 1rem; space between icons
   margin-bottom: 3rem;
 }
 
 .skill-icons img {
   width: 55px;
   height: 55px;
-}
+} */
 
 
 
@@ -557,16 +554,35 @@ Helpers
     color: var(--bs-primary);
 }
 
+/* .row.green-bg {
+    margin: 0 auto;
+    padding: 0;
+} */
+
+.green-bg {
+    background-color: var(--bs-primary);
+}
+
+.green-bg p{
+    width: 35em;
+}
+
 .teal {
     color: var(--bs-secondary);
 }
 
-.icons{
+.icons, .skill-icons {
     width: 60%;
     columns: 2;
 }
 
-.icons img {
+.icons img, .skill-icons img{
     padding-top: 1em;
     /* padding-bottom: 1em; */
+}
+
+.btn-links {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
