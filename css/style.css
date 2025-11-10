@@ -8,11 +8,11 @@ Bootstrap Variables Override
     --bs-secondary: #9AB19B;
     --bs-accent: #C8A7A7;
     --bs-line: #303030;
-    --bs-white-text: #FFFFFF;
-    --bs-grey-text: #303030;
-    --bs-black-text: #000000;
-    --bs-lightgrey: #E3E2E2;
-    --ltpink:#d8bfbf;
+    --bs-white: #FFFFFF;
+    --bs-grey: #303030;
+    --bs-black: #000000;
+    --bs-light-grey: #E3E2E2;
+    --bs-light-pink:#d8bfbf;
 
     --bg-color: #FFFFFF;
 
@@ -29,6 +29,52 @@ Bootstrap Variables Override
 Global Styles and UI Components
 **********************************/
 
+
+/*  -------    LABELED COLORS   -------     */
+
+.green {
+    color: var(--bs-primary);
+}
+
+.green-bg {
+    background-color: var(--bs-primary);
+}
+
+.green-bg p{
+    width: 35em;
+}
+
+.teal {
+    color: var(--bs-secondary);
+}
+
+.pink {
+    color: var(--bs-accent);
+}
+
+.light-pink {
+    color: var(--bs-light-pink);
+}
+
+.black {
+    color: var(--bs-black);
+}
+
+.white {
+    color: var(--bs-grey);
+}
+
+.grey {
+    color: var(--bs-grey);
+}
+
+.light-grey {
+    color: var(--bs-light-grey);
+}
+
+
+
+
 /* --------- NAVIGATION BAR --------- */
 .navbar {
     display: flex;
@@ -43,7 +89,7 @@ Global Styles and UI Components
     gap: 3rem;      
     margin: 0;
     padding-right: 2rem;
-    /* border-bottom: 1px solid var(--bs-black-text); */
+    /* border-bottom: 1px solid var(--bs-black); */
 }
 
 .navbar .navbar_menu li{
@@ -89,7 +135,6 @@ Global Styles and UI Components
     margin-top: 0; 
     margin-bottom: 0;
     display: flex;
-    /* align-items: center;       vertically center the row content */
 
 }
 
@@ -98,7 +143,7 @@ Global Styles and UI Components
   margin: 0 auto;
 }
 
-.hero-logo {                   /* Green logo box area */
+.hero-logo {       /* Green logo box area */
     margin-top: 0;
     padding: 0 0rem 0rem 0rem; /* top 0, sides 2rem, bottom 2rem */
     flex: 1;                   /* left green block takes half */
@@ -109,8 +154,8 @@ Global Styles and UI Components
     background-color: var(--bs-primary);
     gap: 2rem;                    /* spacing between logo and button */
 
-    border-left: 2em solid var(--ltpink);
-    border-right: 2em solid var(--ltpink);
+    border-left: 2em solid var(--bs-light-pink);
+    border-right: 2em solid var(--bs-light-pink);
 }
 
 .mm-logo{
@@ -152,12 +197,19 @@ Global Styles and UI Components
 
 
 ._line {
-    border-top: 1px solid var(--bs-black-text);
-    border-bottom: 1px solid var(--bs-black-text);
+    border-top: 1px solid var(--bs-grey);
+    border-bottom: 1px solid var(--bs-grey);
     width: 95%;
     padding: 20% 0;
     margin: 3em 0;
 }
+
+.inspiration._line> .row>*{ /* "Inspired by Nature" line */
+    margin: 0;
+    padding: 0;
+}
+
+
 
 /* ------- PINK BUTTON ------- */
 .btn-pink {
@@ -168,6 +220,7 @@ Global Styles and UI Components
   padding: 0.5rem 1.5rem;
   font-family: 'NATS', sans-serif;
   font-weight: 550;
+  letter-spacing: 0.05em;
   text-align: center;
   cursor: pointer;
   transition: filter 0.3s;  /* smooth hover effect */
@@ -198,7 +251,6 @@ Global Styles and UI Components
   margin: 0 auto;
 }
 
-
 .hobby-icons {
   /* display: flex; */
   /* gap: 1rem; space between icons */
@@ -210,16 +262,20 @@ Global Styles and UI Components
   width: 60%;
 }
 
-/* .skill-icons {
-  display: flex;
-  gap: 1rem; space between icons
-  margin-bottom: 3rem;
+.icons, .skill-icons {
+    width: 70%;
+    columns: 2;
 }
 
-.skill-icons img {
-  width: 55px;
-  height: 55px;
-} */
+.icons img, .skill-icons img{
+    padding-top: 1em;  /* padding-bottom: 1em; */
+}
+
+.btn-link {   /* linkedin button */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
 
 
 
@@ -244,6 +300,7 @@ footer .footer_list {
     padding-right: 2rem;
     align-items: center;
 }
+
 .socials_list{
     list-style: none;
     display: flex;
@@ -375,7 +432,7 @@ img {
 }
 
 svg {
-    color: var(--bs-grey-text);
+    color: var(--bs-grey);
     width: 25px;
     height: 25px;
     padding: .2em;
@@ -569,47 +626,3 @@ Helpers
     
 }
     }
-
-    
-
-.inspiration._line> .row>*{
-    margin: 0;
-    padding: 0;
-}
-
-.green {
-    color: var(--bs-primary);
-}
-
-/* .row.green-bg {
-    margin: 0 auto;
-    padding: 0;
-} */
-
-.green-bg {
-    background-color: var(--bs-primary);
-}
-
-.green-bg p{
-    width: 35em;
-}
-
-.teal {
-    color: var(--bs-secondary);
-}
-
-.icons, .skill-icons {
-    width: 60%;
-    columns: 2;
-}
-
-.icons img, .skill-icons img{
-    padding-top: 1em;
-    /* padding-bottom: 1em; */
-}
-
-.btn-links {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-}
