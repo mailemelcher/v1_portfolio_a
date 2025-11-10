@@ -227,7 +227,7 @@ Global Styles and UI Components
 }
 
 .btn-pink:hover {
-  background-color: var(--ltpink) /* manually lighter pink */
+  background-color: var(--bs-light-pink) /* manually lighter pink */
 }
 
 .btn-icon {
@@ -245,17 +245,12 @@ Global Styles and UI Components
 }
 
 .about-photo {
-  /* max-width: 458px;    keeps consistent sizing like before */
   border-radius: 0px;  /* optional — adds a soft curve to match your aesthetic */
   display: block;
   margin: 0 auto;
 }
 
 .hobby-icons {
-  /* display: flex; */
-  /* gap: 1rem; space between icons */
-  /* margin-bottom: 3rem; */
-  /* width: 50%; */
   columns: 2;
   padding: 0 1em;
   margin: 0 1em;
@@ -281,7 +276,6 @@ Global Styles and UI Components
 
 /* --------- FOOTER --------- */
 footer {
-    /* Change footer background color */
     background-color: var(--bs-primary);
     /* Optional: Change footer text color to white using variable */
     color: var(--bs-dark);
@@ -291,7 +285,7 @@ footer {
     
 }
 
-footer .footer_list {
+.footer_list {
    height: 100%;
     list-style: none;
     display: flex;
@@ -307,32 +301,22 @@ footer .footer_list {
     
      gap: 5rem;
 }
+
 .socials_list li a img{
    width: 30px;
    height: 30px;
 
 }
+
 .copyright{
     padding-top: 1rem;
     font-size: 12px;
 }
+
 footer .footer-social {
     /* Optional: Change size of footer icon */
     width:24px;
     margin:.5rem;
-}
-
-.btn-primary {
-    /* Optional: Change primary button background color to primary color */
-    background-color: var(--bs-accent);
-    /* Optional: Remove primary button outline */
-    border: none;
-}
-
-.btn-primary:hover {
-    /* Optional: Change primary button hover state background and text color  */
-    background-color: var(--secondary-color);
-    color: var(--bs-dark);
 }
 
 
