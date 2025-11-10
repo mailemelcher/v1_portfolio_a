@@ -66,13 +66,13 @@ Global Styles and UI Components
 
 
 /* -------- HERO SECTION -------- */
-
-html, body {
-    margin: 0;
-    padding: 0;
+.html{
+    min-height: 100vh;
 }
+
 .hero-section {
     margin-left: 0em;
+    min-height: 100vh;
 }
 
 @media (min-width: 768px) {
@@ -230,13 +230,39 @@ footer {
     /* Optional: Change footer text color to white using variable */
     color: var(--bs-dark);
     /* Optional: Center footer elements */
-    text-align: center;
+    width: 100%;
+    height: 4rem;
+    
 }
 
+footer .footer_list {
+   height: 100%;
+    list-style: none;
+    display: flex;
+    gap: 25%;      
+    margin: 0;
+    padding-right: 2rem;
+    align-items: center;
+}
+.socials_list{
+    list-style: none;
+    display: flex;
+    
+     gap: 5rem;
+}
+.socials_list li a img{
+   width: 30px;
+   height: 30px;
+
+}
+.copyright{
+    padding-top: 1rem;
+    font-size: 12px;
+}
 footer .footer-social {
     /* Optional: Change size of footer icon */
     width:24px;
-    margin:.5rem
+    margin:.5rem;
 }
 
 .btn-primary {
@@ -283,6 +309,7 @@ p {
 body {
   background-color: var(--bg-color);
   font-family: "Lustria", serif;
+  height: 100%;
 }
 
 /* Apply NATS for navigation and buttons */
