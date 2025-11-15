@@ -12,16 +12,15 @@ Bootstrap Variables Override
     --bs-grey: #303030;
     --bs-black: #000000;
     --bs-light-grey: #E3E2E2;
-    --bs-light-pink:#d8bfbf;
+    --bs-light-pink: #d8bfbf;
 
     --bg-color: #FFFFFF;
 
     /* Replace the main body font from your UI Kit */
     --bs-lustria:
-    --bs-nats: 
-
-    /* Optional: Replace gradient from your UI Kit */
-    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+        --bs-nats:
+        /* Optional: Replace gradient from your UI Kit */
+        --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
 }
 
 
@@ -40,7 +39,7 @@ Global Styles and UI Components
     background-color: var(--bs-primary);
 }
 
-.green-bg p{
+.green-bg p {
     width: 35em;
 }
 
@@ -86,18 +85,18 @@ Global Styles and UI Components
 .navbar .navbar_menu {
     list-style: none;
     display: flex;
-    gap: 3rem;      
+    gap: 3rem;
     margin: 0;
     padding-right: 2rem;
     /* border-bottom: 1px solid var(--bs-black); */
 }
 
-.navbar .navbar_menu li{
+.navbar .navbar_menu li {
     width: 232px;
     height: 48px;
 }
 
-.navbar .navbar_menu li a{
+.navbar .navbar_menu li a {
     text-decoration: none;
     color: #C8A7A7;
     font-family: 'NATS', sans-serif;
@@ -112,7 +111,7 @@ Global Styles and UI Components
 
 
 /* -------- HERO SECTION -------- */
-.html{
+.html {
     min-height: 100vh;
 }
 
@@ -127,60 +126,71 @@ Global Styles and UI Components
     }
 }
 
-.hero-section > .row {
-    margin: 0; /* removes default row spacing */
+.hero-section>.row {
+    margin: 0;
+    /* removes default row spacing */
 }
 
-.hero-section > .row > * {
-    margin-top: 0; 
+.hero-section>.row>* {
+    margin-top: 0;
     margin-bottom: 0;
     display: flex;
 
 }
 
 .hero {
-/* width: 1320px; */
-  margin: 0 auto;
+    /* width: 1320px; */
+    margin: 0 auto;
 }
 
-.hero-logo {       /* Green logo box area */
+.hero-logo {
+    /* Green logo box area */
     margin-top: 0;
-    padding: 0 0rem 0rem 0rem; /* top 0, sides 2rem, bottom 2rem */
-    flex: 1;                   /* left green block takes half */
+    padding: 0 0rem 0rem 0rem;
+    /* top 0, sides 2rem, bottom 2rem */
+    flex: 1;
+    /* left green block takes half */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;    /* vertical centering */
+    justify-content: center;
+    /* vertical centering */
     background-color: var(--bs-primary);
-    gap: 2rem;                    /* spacing between logo and button */
+    gap: 2rem;
+    /* spacing between logo and button */
 
     border-left: 2em solid var(--bs-light-pink);
     border-right: 2em solid var(--bs-light-pink);
 }
 
-.mm-logo{
+.mm-logo {
     width: 45%;
     padding-top: 30px;
 }
 
 .hero-text {
-    flex: 1;                   /* right text takes remaining half */
+    flex: 1;
+    /* right text takes remaining half */
     display: flex;
     flex-direction: column;
-    justify-content: center;    /* vertical centering */
+    justify-content: center;
+    /* vertical centering */
     align-items: flex-start;
     text-align: left;
-    gap: 0.5rem;               /* spacing between lines */
+    gap: 0.5rem;
+    /* spacing between lines */
 }
 
-.hero-text .line1 {            /* "Inspired by Nature" */
+.hero-text .line1 {
+    /* "Inspired by Nature" */
     font-family: "Lustria", serif;
     font-size: 3em;
     color: #7C9970;
     margin: 0;
 }
 
-.hero-text .line2 {             /* "I am to create designs that feel grounded..." */
+.hero-text .line2 {
+    /* "I am to create designs that feel grounded..." */
     font-family: "Lustria", serif;
     font-size: 1.8em;
     color: #9AB19B;
@@ -204,7 +214,8 @@ Global Styles and UI Components
     margin: 3em 0;
 }
 
-.inspiration._line> .row>*{ /* "Inspired by Nature" line */
+.inspiration._line>.row>* {
+    /* "Inspired by Nature" line */
     margin: 0;
     padding: 0;
 }
@@ -213,60 +224,70 @@ Global Styles and UI Components
 
 /* ------- PINK BUTTON ------- */
 .btn-pink {
-  background-color: var(--bs-accent); /* original pink */
-  color: #FFFFFF;
-  border: none;
-  border-radius: 5px;
-  padding: 0.5rem 1.5rem;
-  font-family: 'NATS', sans-serif;
-  font-weight: 550;
-  letter-spacing: 0.05em;
-  text-align: center;
-  cursor: pointer;
-  transition: filter 0.3s;  /* smooth hover effect */
+    background-color: var(--bs-accent);
+    /* original pink */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1.5rem;
+    font-family: 'NATS', sans-serif;
+    font-weight: 550;
+    letter-spacing: 0.05em;
+    text-align: center;
+    cursor: pointer;
+    transition: filter 0.3s;
+    /* smooth hover effect */
 }
 
 .btn-pink:hover {
-  background-color: var(--bs-light-pink) /* manually lighter pink */
+    background-color: var(--bs-light-pink)
+        /* manually lighter pink */
 }
 
 .btn-icon {
-  width: 17px;
-  height: auto;  /* maintains original aspect ratio */
-  margin-right: 8px;   /* space between icon and text */
+    width: 17px;
+    height: auto;
+    /* maintains original aspect ratio */
+    margin-right: 8px;
+    /* space between icon and text */
 }
 
 
 
 /* --------- ABOUT ---------- */
 .about-photo-section {
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
 }
 
 .about-photo {
-  border-radius: 0px;  /* optional — adds a soft curve to match your aesthetic */
-  display: block;
-  margin: 0 auto;
+    border-radius: 0px;
+    /* optional — adds a soft curve to match your aesthetic */
+    display: block;
+    margin: 0 auto;
 }
 
 .hobby-icons {
-  columns: 2;
-  padding: 0 1em;
-  margin: 0 1em;
-  width: 60%;
+    columns: 2;
+    padding: 0 1em;
+    margin: 0 1em;
+    width: 60%;
 }
 
-.icons, .skill-icons {
+.icons,
+.skill-icons {
     width: 70%;
     columns: 2;
 }
 
-.icons img, .skill-icons img{
-    padding-top: 1em;  /* padding-bottom: 1em; */
+.icons img,
+.skill-icons img {
+    padding-top: 1em;
+    /* padding-bottom: 1em; */
 }
 
-.btn-link {   /* linkedin button */
+.btn-link {
+    /* linkedin button */
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -282,41 +303,41 @@ footer {
     /* Optional: Center footer elements */
     width: 100%;
     height: 4rem;
-    
+
 }
 
 .footer_list {
-   height: 100%;
+    height: 100%;
     list-style: none;
     display: flex;
-    gap: 25%;      
+    gap: 25%;
     margin: 0;
     padding-right: 2rem;
     align-items: center;
 }
 
-.socials_list{
+.socials_list {
     list-style: none;
     display: flex;
-    
-     gap: 5rem;
+
+    gap: 5rem;
 }
 
-.socials_list li a img{
-   width: 30px;
-   height: 30px;
+.socials_list li a img {
+    width: 30px;
+    height: 30px;
 
 }
 
-.copyright{
+.copyright {
     padding-top: 1rem;
     font-size: 12px;
 }
 
 footer .footer-social {
     /* Optional: Change size of footer icon */
-    width:24px;
-    margin:.5rem;
+    width: 24px;
+    margin: .5rem;
 }
 
 
@@ -331,36 +352,38 @@ h4,
 h5,
 h6 {
 
-.lustria-regular {
-  font-family: "Lustria", serif;
-  font-weight: 400;
-  font-style: normal;
-}
+    .lustria-regular {
+        font-family: "Lustria", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
 
-p {
-    margin-bottom: 2rem;
-}
+    p {
+        margin-bottom: 2rem;
+    }
 
-.m-bottom {
-    margin-bottom: 10rem;
-}
+    .m-bottom {
+        /* custom margin */
+        margin-bottom: 10rem;
+    }
 
 
     /* Apply Lustria sitewide, except navigation and buttons */
-body {
-  background-color: var(--bg-color);
-  font-family: "Lustria", serif;
-  height: 100%;
-}
+    body {
+        background-color: var(--bg-color);
+        font-family: "Lustria", serif;
+        height: 100%;
+    }
 
-/* Apply NATS for navigation and buttons */
-.navbar a,
-.navbar_menu a,
-.btn,
-button,
-a {
-  font-family: 'NATS', sans-serif;
-}
+    /* Apply NATS for navigation and buttons */
+    .navbar a,
+    .navbar_menu a,
+    .btn,
+    button,
+    a {
+        font-family: 'NATS', sans-serif;
+    }
+
     /* Optional: Add letter spacing to all headings */
     letter-spacing: 0.0rem;
     /* Optional: Adjust font-weight to all headings */
@@ -368,9 +391,9 @@ a {
 }
 
 header {
-  margin: 0;
-  padding: 0;
-  height: 0;
+    margin: 0;
+    padding: 0;
+    height: 0;
 }
 
 
@@ -404,6 +427,7 @@ h2 {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+
     /* Optional: Customize responsive style for display-1 on small devices and larger */
     .display-1 {
         font-size: 4rem;
@@ -427,9 +451,11 @@ svg {
 .text-centered {
     text-align: center;
 }
+
 .text-left {
     text-align: left;
 }
+
 .text-right {
     text-align: right;
 }
@@ -446,17 +472,21 @@ Helpers
 .row {
     --gridgap: 2em;
 }
+
 .row2 {
     --gridgap2: 0em;
 }
+
 .row>* {
     margin-top: var(--gridgap);
     margin-bottom: var(--gridgap);
 }
-.row2 + .row2 {
+
+.row2+.row2 {
     margin-top: var(--gridgap2);
     margin-bottom: var(--gridgap2);
 }
+
 @media (min-width: 768px) {
     .row {
         display: grid;
@@ -468,7 +498,7 @@ Helpers
 
 
 
-/* -------------- G R I D S -------------- */
+    /* -------------- G R I D S -------------- */
     /* COMMONLY USED SEMANTIC COLUMN WIDTHS */
     .one-half {
         grid-column: auto / span 6;
@@ -598,15 +628,56 @@ Helpers
     }
 
     /* SWAP (REVERSE) COLUMNS - WORKS ONLY w/ 2 CHILDREN  */
-    .row.swapped > *:first-child { order: 2; }
-    .row.swapped > *:last-child { order: 1; }
+    .row.swapped>*:first-child {
+        order: 2;
+    }
+
+    .row.swapped>*:last-child {
+        order: 1;
+    }
 }
 
 @media (min-width: 768px) {
-.social-links {
-    display: flex;
-    justify-content: end;
-    padding: 5em 0 0 0;
-    
-}
+    .social-links {
+        display: flex;
+        justify-content: end;
+        padding: 5em 0 0 0;
+
     }
+}
+
+#projects p.project_detail_text {
+    padding-bottom: .5em;
+    width: 30em;
+    /* border: 1px solid red; */
+}
+
+.projects,
+section.projects {
+    margin: 0 2em;
+
+}
+
+.wireframe {
+    columns: 4;
+}
+
+h2.m-bottom {
+    margin-top: 1em;
+}
+
+.lowfi-wireframe,
+.highfi-wireframe {
+    padding: 2em 2em 2em 2em;
+
+}
+
+.lowfi-wireframe {
+    background-color: #E3E2E2;
+    /* padding: 2em 0; */
+}
+
+.highfi-wireframe {
+    background-color: #A6A6A6;
+    /* padding: 2em 0; */
+}
