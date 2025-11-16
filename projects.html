@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- REQUIRED: Google Font API -->
-    <link href="https://fonts.googleapis.com/css2?family=Lustria&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lustria&family=NATS&display=swap" rel="stylesheet">
 </head>
 
 
@@ -33,51 +33,53 @@
 
 
     <section class="projects">
-        <h1>Creating Comfort Lab</h1> <!-- h1 = size=30 | color: #303030 | font: Lustria -->
-        <h3 class="caps">Ui | Web Design</h3> <!-- h3 = size=20 | color: #303030 | font: NATS -->
-
-
-        <h3 class="caps">Programs Used</h3>
-        <img src="images/photoshopicon.png" alt="Photoshop icon">
-        <img src="images/indesignicon.png" alt="InDesign icon">
-
+        <h1 class="projects-h1">Creating Comfort Lab</h1>
+        <h3 class="projects-h3 caps">Ui | Web Design</h3>
 
         <div class="projects">
             <div class="row">
                 <div class="one-third">
                     <img src="images/CCL_clients.png" alt="Creating Comfort Lab clients image">
                     <!-- IMG: 203 x 341 | PNG | radius: 0 -->
-                    <p class="project_detail_text">From branding to user interface,
-                        every element was crafted to
-                        reflect comfort, creativity,
+                    <p class="project_detail_text project_detail_text_mini">From branding to user interface, every
+                        element <br>
+                        was crafted to reflect comfort, creativity,<br>
                         & the beauty of slow living.</p>
+                    <div class="projects-line-mini">
+                        <h3 class="projects-h1 caps">Programs Used</h3>
+                        <div class="ccl-icons">
+                            <img src="images/photoshopicon.png" alt="Photoshop icon">
+                            <img src="images/indesignicon.png" alt="InDesign icon">
+                        </div>
+                    </div>
 
                 </div>
                 <div class="two-thirds">
-                    <p class="project_detail_text">The Creating Comfort Lab is a conceptual e-commerce
-                        project designed by myself utilizing Photoshop & InDesign.</p>
+                    <div class="projects-line">
+                        <p class="project_detail_text">
+                            The <span style="color: #999999; font-size: 1em; font-family: 'NATS', sans-serif;">
+                                <b>Creating Comfort Lab</b></span>
+                            is a conceptual e-commerce project designed by myself utilizing Photoshop & InDesign.
+                        </p>
 
-                    <p class="project_detail_text">Inspired by the calm and grounding nature of handmade
-                        ceramics, this project explores how thoughtful design can
-                        evoke warmth, texture, & calm in a digital space.</p>
+                        <p class="project_detail_text">Inspired by the calm and grounding nature of handmade
+                            ceramics, this project explores how thoughtful design can
+                            evoke warmth, texture, & calm in a digital space.</p>
 
-                    <p class="project_detail_text">With a minimalist layout and soft, earth-toned palette, I aimed
-                        to translate the tactile feeling of clay into a visual experience
-                        — merging craftsmanship with modern web design.</p>
-
-                    <div class="row">
-                        <div class="one-half">
-                            <img src="images/CCL_1.png" alt="Creating Comfort Lab cover page image">
+                        <p class="project_detail_text">With a minimalist layout and soft, earth-toned palette, I aimed
+                            to translate the tactile feeling of clay into a visual experience
+                            — merging craftsmanship with modern web design.</p>
+                    </div>
+                    <div class="row ccl-images">
+                        <div class="one-half"><img src="images/CCL_1.png" alt="Creating Comfort Lab cover page image">
                             <!-- IMG: 177 x 227 | JPG | radius: 0 -->
                         </div>
-                        <div class="one-half">
-                            <img src="images/CCL_2.png" alt="Creating Comfort Lab design brief image">
+                        <div class="one-half"><img src="images/CCL_2.png" alt="Creating Comfort Lab design brief image">
                             <!-- IMG: 177 x 227 | JPG | radius: 0 -->
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="one-third">
-                            <img src="images/CCL_3.png"
+                    <div class="row ccl-images">
+                        <div class="one-third"><img src="images/CCL_3.png"
                                 alt="Creating Comfort Lab style tile image"><!-- IMG: 177 x 227 | JPG | radius: 0 -->
                         </div>
                         <div class="one-third">
@@ -94,7 +96,8 @@
         </div>
     </section>
     <section class="projects lowfi-wireframe">
-        <h2 class="m-bottom">Low-Fi Wireframe</h2> <!-- h2 = size=20 | color: #303030 | font: Lustria -->
+        <h2 class="wireframe-heading projects-h1">Low-Fi Wireframe</h2>
+        <!-- h2 = size=20 | color: #303030 | font: Lustria -->
 
         <div class="wireframe">
 
@@ -115,7 +118,7 @@
     </section>
 
     <section class="projects highfi-wireframe">
-        <h2 class="m-bottom">High-Fi Wireframe</h2>
+        <h2 class="wireframe-heading projects-h1">High-Fi Wireframe</h2>
         <div class="wireframe">
             <div class="one-fourth"> <img src="images/CCL_website_1.png"
                     alt="Creating Comfort Lab homepage high-fi wireframe image"></div>
@@ -127,6 +130,32 @@
                     alt="Creating Comfort Lab checkout high-fi wireframe image"></div>
         </div>
     </section>
+
+
+    <!-- Footer Section -->
+    <footer>
+
+        <ul class="footer_list">
+            <li>
+                <div class="socials">
+                    <ul class="social-icons">
+                        <li><a href="#"><img src="images/instagramicon.png" alt="Instagram icon"
+                                    style="height:26px; width:26px;"></a></li>
+                        <li><a href="#"><img src="images/linkedinicon.png" alt="LinkedIn icon"></a></li>
+                        <li><a href="#"><img src="images/facebookicon.png" alt="Facebook icon"></a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="copyright">
+                <p style="color: white;"> Copyright: © 2025 Maile Melcher. All rights reserved.</p>
+            </li>
+            <li> <button class="btn-pink">GET IN TOUCH</button> </li>
+        </ul>
+
+
+    </footer>
+
 </body>
 
 </html>

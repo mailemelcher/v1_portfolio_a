@@ -17,10 +17,11 @@ Bootstrap Variables Override
     --bg-color: #FFFFFF;
 
     /* Replace the main body font from your UI Kit */
-    --bs-lustria:
-        --bs-nats:
-        /* Optional: Replace gradient from your UI Kit */
-        --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    --bs-lustria: 'Lustria', serif;
+    --bs-nats: 'NATS', sans-serif;
+
+    /* Optional: Replace gradient from your UI Kit */
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
 }
 
 
@@ -60,7 +61,7 @@ Global Styles and UI Components
 }
 
 .white {
-    color: var(--bs-grey);
+    color: var(--bs-white);
 }
 
 .grey {
@@ -70,7 +71,6 @@ Global Styles and UI Components
 .light-grey {
     color: var(--bs-light-grey);
 }
-
 
 
 
@@ -110,7 +110,7 @@ Global Styles and UI Components
 
 
 
-/* -------- HERO SECTION -------- */
+/* -------- HOMEPAGE  |  HERO  -------- */
 .html {
     min-height: 100vh;
 }
@@ -206,7 +206,143 @@ Global Styles and UI Components
 }
 
 
-._line {
+
+
+/* --------- ABOUT ---------- */
+.about-photo-section {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.about-photo {
+    border-radius: 0px;
+    /* optional — adds a soft curve to match your aesthetic */
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+.btn-link {
+    /* linkedin button */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+
+
+
+/*  ------  PROJECTS ------  */
+.projects,
+section.projects {
+    margin: 0 2em;
+}
+
+.projects .project_detail_text,
+.projects-line {
+    margin-top: 0;
+}
+
+/* Project Title - H1 */
+h1.projects-h1 {
+    font-family: 'Lustria', serif;
+    font-size: 40px;
+    color: #303030;
+    margin-top: 0;
+    margin-bottom: 0.3em;
+
+    text-align: center;
+    margin-left: -35em;
+    margin-right: 0em;
+}
+
+/* Project Subtitle - H3 */
+h3.projects-h3 {
+    font-family: 'NATS', sans-serif;
+    font-size: 30px;
+    color: #303030;
+    margin-top: 0;
+    margin-bottom: 1em;
+
+    text-align: center;
+    margin-left: -46.5em;
+    margin-right: 0em;
+}
+
+.projects .project_detail_text {
+    padding-bottom: .5em;
+    max-width: 55em;
+    line-height: 3;
+    font-family: "Lustria", serif;
+    font-size: 18px;
+}
+
+.project_detail_text_mini {
+    max-width: 35ch;
+    line-height: 3;
+    padding-top: 3em;
+    font-family: "Lustria", serif;
+    font-size: 18px;
+
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2.m-bottom {
+    margin-top: 1em;
+}
+
+.ccl-images {
+    gap: 1em;
+}
+
+.ccl-images img {
+    width: 20em;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.wireframe {
+    columns: 4;
+}
+
+.wireframe-heading {
+    margin-bottom: 2rem;
+    color: #303030;
+    text-align: center;
+    /* center heading */
+    width: 100%;
+    /* ensures the heading spans the full container */
+}
+
+.lowfi-wireframe,
+.highfi-wireframe {
+    padding: 3em 4em 2em 4em;
+    margin: 0 auto;
+    max-width: 100%;
+    padding-bottom: 6em;
+}
+
+.lowfi-wireframe {
+    background-color: #E3E2E2;
+    /* padding: 2em 0; */
+}
+
+.highfi-wireframe {
+    background-color: #999999;
+    /* padding: 2em 0; */
+}
+
+
+
+
+
+/* ------ ______ LINE ------ */
+.homepage-line {
     border-top: 1px solid var(--bs-grey);
     border-bottom: 1px solid var(--bs-grey);
     width: 95%;
@@ -214,11 +350,35 @@ Global Styles and UI Components
     margin: 3em 0;
 }
 
-.inspiration._line>.row>* {
+.inspiration.homepage-line>.row>* {
     /* "Inspired by Nature" line */
     margin: 0;
     padding: 0;
 }
+
+
+.projects-line {
+    /*note: width size changes width size of icons/imgs using the code */
+    border-top: 1px solid var(--bs-grey);
+    border-bottom: 1px solid var(--bs-grey);
+    width: 95%;
+    padding: 3% 0;
+}
+
+.projects-line-mini {
+    border-top: 1px solid var(--bs-grey);
+    border-bottom: 1px solid var(--bs-grey);
+    width: 90%;
+    padding: 4% 0;
+    margin: 3em auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 01em;
+}
+
 
 
 
@@ -254,19 +414,22 @@ Global Styles and UI Components
 
 
 
-/* --------- ABOUT ---------- */
-.about-photo-section {
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+
+/* --------- ICONS --------- */
+/* Home Page icons */
+.icons,
+.skill-icons {
+    width: 72%;
+    columns: 2;
 }
 
-.about-photo {
-    border-radius: 0px;
-    /* optional — adds a soft curve to match your aesthetic */
-    display: block;
-    margin: 0 auto;
+.icons img,
+.skill-icons img {
+    padding-top: 1em;
+    /* padding-bottom: 3em; */
 }
 
+/* About Page icons */
 .hobby-icons {
     columns: 2;
     padding: 0 1em;
@@ -274,28 +437,15 @@ Global Styles and UI Components
     width: 60%;
 }
 
-.icons,
-.skill-icons {
-    width: 70%;
-    columns: 2;
-}
-
-.icons img,
-.skill-icons img {
-    padding-top: 1em;
-    /* padding-bottom: 1em; */
-}
-
-.btn-link {
-    /* linkedin button */
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+/* Projects Page icons */
+.ccl-icons img {
+    width: 35%;
+    padding: 1em
 }
 
 
 
-/* --------- FOOTER --------- */
+/* --------- FOOTER (includes footer icons) --------- */
 footer {
     background-color: var(--bs-primary);
     /* Optional: Change footer text color to white using variable */
@@ -316,14 +466,14 @@ footer {
     align-items: center;
 }
 
-.socials_list {
+.social-icons {
     list-style: none;
     display: flex;
 
     gap: 5rem;
 }
 
-.socials_list li a img {
+.social-icons li a img {
     width: 30px;
     height: 30px;
 
@@ -342,52 +492,54 @@ footer .footer-social {
 
 
 
+
 /********************************
 Typography
 **********************************/
+/* Sitewide heading reset */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-
-    .lustria-regular {
-        font-family: "Lustria", serif;
-        font-weight: 400;
-        font-style: normal;
-    }
-
-    p {
-        margin-bottom: 2rem;
-    }
-
-    .m-bottom {
-        /* custom margin */
-        margin-bottom: 10rem;
-    }
-
-
-    /* Apply Lustria sitewide, except navigation and buttons */
-    body {
-        background-color: var(--bg-color);
-        font-family: "Lustria", serif;
-        height: 100%;
-    }
-
-    /* Apply NATS for navigation and buttons */
-    .navbar a,
-    .navbar_menu a,
-    .btn,
-    button,
-    a {
-        font-family: 'NATS', sans-serif;
-    }
-
-    /* Optional: Add letter spacing to all headings */
-    letter-spacing: 0.0rem;
-    /* Optional: Adjust font-weight to all headings */
+    letter-spacing: 0rem;
     font-weight: 800;
+    margin: 0;
+}
+
+/* Apply Lustria sitewide for body text (except navbar/buttons) */
+body {
+    background-color: var(--bg-color);
+    font-family: 'Lustria', serif;
+    font-weight: 400;
+    height: 100%;
+}
+
+/* Navigation and buttons use NATS */
+.navbar a,
+.navbar_menu a,
+.btn,
+button,
+a {
+    font-family: 'NATS', sans-serif;
+}
+
+
+p {
+    margin-bottom: 2rem;
+}
+
+.m-bottom {
+    /* custom margin */
+    margin-bottom: 10rem;
+}
+
+
+/* Optional: Add letter spacing to all headings */
+letter-spacing: 0.0rem;
+/* Optional: Adjust font-weight to all headings */
+font-weight: 800;
 }
 
 header {
@@ -447,6 +599,7 @@ svg {
 }
 
 
+
 /* ------ TEXT ALIGNMENT ------ */
 .text-centered {
     text-align: center;
@@ -460,12 +613,17 @@ svg {
     text-align: right;
 }
 
+
 /********************************
 Helpers
 **********************************/
+
 .caps {
     text-transform: uppercase;
+    letter-spacing: 0.05em;
+    /* optional spacing */
 }
+
 
 
 /* ------------ GRID ------------ */
@@ -644,40 +802,4 @@ Helpers
         padding: 5em 0 0 0;
 
     }
-}
-
-#projects p.project_detail_text {
-    padding-bottom: .5em;
-    width: 30em;
-    /* border: 1px solid red; */
-}
-
-.projects,
-section.projects {
-    margin: 0 2em;
-
-}
-
-.wireframe {
-    columns: 4;
-}
-
-h2.m-bottom {
-    margin-top: 1em;
-}
-
-.lowfi-wireframe,
-.highfi-wireframe {
-    padding: 2em 2em 2em 2em;
-
-}
-
-.lowfi-wireframe {
-    background-color: #E3E2E2;
-    /* padding: 2em 0; */
-}
-
-.highfi-wireframe {
-    background-color: #A6A6A6;
-    /* padding: 2em 0; */
 }
