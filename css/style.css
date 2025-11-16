@@ -532,15 +532,15 @@ p {
 
 .m-bottom {
     /* custom margin */
-    margin-bottom: 10rem;
+    margin-bottom: 1rem;
 }
 
 
 /* Optional: Add letter spacing to all headings */
-letter-spacing: 0.0rem;
+/* letter-spacing: 0.0rem;
 /* Optional: Adjust font-weight to all headings */
-font-weight: 800;
-}
+/* font-weight: 800; */
+
 
 header {
     margin: 0;
