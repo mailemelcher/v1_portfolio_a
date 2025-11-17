@@ -91,6 +91,111 @@ body {
 }
 
 
+/* ------ ______ LINE ------ */
+.homepage-line {
+    border-top: 1px solid var(--bs-grey);
+    border-bottom: 1px solid var(--bs-grey);
+    width: 95%;
+    padding: 20% 0;
+    margin: 3em 0;
+}
+
+.inspiration.homepage-line>.row>* {
+    /* "Inspired by Nature" line */
+    margin: 0;
+    padding: 0;
+}
+
+
+.projects-line {
+    /*note: width size changes width size of icons/imgs using the code */
+    border-top: 1px solid var(--bs-grey);
+    border-bottom: 1px solid var(--bs-grey);
+    width: 95%;
+    padding: 2% 0;
+    margin: 1em auto;
+    margin-bottom: 3.5em;
+}
+
+.projects-line-mini {
+    border-top: 1px solid var(--bs-grey);
+    border-bottom: 1px solid var(--bs-grey);
+    width: 90%;
+    padding: 5% 0;
+    margin: 5em auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 01em;
+}
+
+
+
+
+/* ------- PINK BUTTON ------- */
+.btn-pink {
+    background-color: var(--bs-accent);
+    /* original pink */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1.5rem;
+    font-family: 'NATS', sans-serif;
+    font-weight: 550;
+    letter-spacing: 0.05em;
+    text-align: center;
+    cursor: pointer;
+    transition: filter 0.3s;
+    /* smooth hover effect */
+}
+
+.btn-pink:hover {
+    background-color: var(--bs-light-pink)
+        /* manually lighter pink */
+}
+
+.btn-icon {
+    width: 17px;
+    height: auto;
+    /* maintains original aspect ratio */
+    margin-right: 8px;
+    /* space between icon and text */
+}
+
+
+
+
+/* --------- ICONS --------- */
+/* Home Page icons */
+.icons,
+.skill-icons {
+    width: 70%;
+    columns: 2;
+}
+
+.icons img,
+.skill-icons img {
+    padding-top: 1em;
+    /* padding-bottom: 3em; */
+}
+
+/* About Page icons */
+.hobby-icons {
+    columns: 2;
+    padding: 0 1em;
+    margin: 0 1em;
+    width: 60%;
+}
+
+/* Projects Page icons */
+.ccl-icons img {
+    width: 35%;
+    padding: 1em
+}
+
+
 /* --------- NAVIGATION BAR (ALL OTHER PAGES) --------- */
 
 /* LOGO */
@@ -420,114 +525,6 @@ h3.projects-h3 {
 
 
 
-
-
-/* ------ ______ LINE ------ */
-.homepage-line {
-    border-top: 1px solid var(--bs-grey);
-    border-bottom: 1px solid var(--bs-grey);
-    width: 95%;
-    padding: 20% 0;
-    margin: 3em 0;
-}
-
-.inspiration.homepage-line>.row>* {
-    /* "Inspired by Nature" line */
-    margin: 0;
-    padding: 0;
-}
-
-
-.projects-line {
-    /*note: width size changes width size of icons/imgs using the code */
-    border-top: 1px solid var(--bs-grey);
-    border-bottom: 1px solid var(--bs-grey);
-    width: 95%;
-    padding: 2% 0;
-    margin: 1em auto;
-    margin-bottom: 3.5em;
-}
-
-.projects-line-mini {
-    border-top: 1px solid var(--bs-grey);
-    border-bottom: 1px solid var(--bs-grey);
-    width: 90%;
-    padding: 5% 0;
-    margin: 5em auto;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 01em;
-}
-
-
-
-
-/* ------- PINK BUTTON ------- */
-.btn-pink {
-    background-color: var(--bs-accent);
-    /* original pink */
-    color: #FFFFFF;
-    border: none;
-    border-radius: 5px;
-    padding: 0.5rem 1.5rem;
-    font-family: 'NATS', sans-serif;
-    font-weight: 550;
-    letter-spacing: 0.05em;
-    text-align: center;
-    cursor: pointer;
-    transition: filter 0.3s;
-    /* smooth hover effect */
-}
-
-.btn-pink:hover {
-    background-color: var(--bs-light-pink)
-        /* manually lighter pink */
-}
-
-.btn-icon {
-    width: 17px;
-    height: auto;
-    /* maintains original aspect ratio */
-    margin-right: 8px;
-    /* space between icon and text */
-}
-
-
-
-
-/* --------- ICONS --------- */
-/* Home Page icons */
-.icons,
-.skill-icons {
-    width: 72%;
-    columns: 2;
-}
-
-.icons img,
-.skill-icons img {
-    padding-top: 1em;
-    /* padding-bottom: 3em; */
-}
-
-/* About Page icons */
-.hobby-icons {
-    columns: 2;
-    padding: 0 1em;
-    margin: 0 1em;
-    width: 60%;
-}
-
-/* Projects Page icons */
-.ccl-icons img {
-    width: 35%;
-    padding: 1em
-}
-
-
-
 /* --------- FOOTER (includes footer icons) --------- */
 footer {
     background-color: var(--bs-primary);
@@ -536,19 +533,23 @@ footer {
 
     width: 100%;
     height: 6em;
-
 }
 
 .footer_list {
     height: 100%;
     list-style: none;
     display: flex;
-    gap: 25%;
-    margin: 0;
+    gap: 30%;
     padding-right: 2rem;
     align-items: center;
 }
 
+footer .footer-social {
+    width: 20em;
+    margin: 0rem;
+}
+
+/* footer social media icons */
 .social-icons {
     list-style: none;
     display: flex;
@@ -557,22 +558,19 @@ footer {
 }
 
 .social-icons li a img {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
 
 }
 
+/* copyright text */
 .copyright {
     padding-top: 2.5rem;
     font-size: 12px;
 
 }
 
-footer .footer-social {
-    /* Optional: Change size of footer icon */
-    width: 24px;
-    margin: .5rem;
-}
+
 
 
 
