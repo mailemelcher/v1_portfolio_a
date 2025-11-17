@@ -73,22 +73,57 @@ Global Styles and UI Components
 }
 
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* --------- NAVIGATION BAR --------- */
+.html {
+    min-height: 100vh;
+
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* --------- NAVIGATION BAR (ALL OTHER PAGES) --------- */
+
+/* LOGO */
+.mm-logo-text img {
+    height: 5em;
+    /* adjust as needed */
+    width: 15em;
+    display: block;
+    margin-top: 1em;
+}
+
+
 .navbar {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    margin-top: 0em;
+    margin-left: 3em;
     /* align-items: left; */
     /* padding-right: 3rem; */
+}
+
+.navbar-home {
+    justify-content: flex-end;
 }
 
 .navbar .navbar_menu {
     list-style: none;
     display: flex;
-    gap: 3rem;
+    gap: 8rem;
+    padding-top: 2em;
     margin: 0;
     padding-right: 2rem;
-    /* border-bottom: 1px solid var(--bs-black); */
+
 }
 
 .navbar .navbar_menu li {
@@ -108,16 +143,37 @@ Global Styles and UI Components
     border-radius: 8px;
 }
 
+/* home | On hover */
+.home_navbar_menu li a:hover {
+    color: var(--bs-secondary);
+}
+
+/* home | Active page link */
+.home_navbar_menu li a.active {
+    color: var(--bs-secondary);
+    font-weight: bold;
+}
+
+/* other pages | On hover */
+.navbar_menu li a:hover {
+    color: var(--bs-secondary);
+}
+
+/* other pages | Active page link */
+.navbar_menu li a.active {
+    color: var(--bs-secondary);
+    font-weight: bold;
+}
+
+
 
 
 /* -------- HOMEPAGE  |  HERO  -------- */
-.html {
-    min-height: 100vh;
-}
+
 
 .hero-section {
     margin-left: 0em;
-    min-height: 100vh;
+
 }
 
 @media (min-width: 768px) {
@@ -238,11 +294,12 @@ Global Styles and UI Components
 .projects,
 section.projects {
     margin: 0 2em;
+    margin-top: -2em;
 }
 
 .projects .project_detail_text,
 .projects-line {
-    margin-top: 0;
+    margin-top: 0em;
 }
 
 h1.m-bottom {
@@ -250,6 +307,17 @@ h1.m-bottom {
 }
 
 /* Project Title - H1 */
+h1.projects-title-h1 {
+    /* "Creating Comfort Lab" txt */
+    font-family: 'Lustria', serif;
+    font-size: 50px;
+    color: #303030;
+    margin-top: 4em;
+    margin-bottom: 0.5em;
+
+    text-align: center;
+}
+
 h1.projects-h1 {
     font-family: 'Lustria', serif;
     font-size: 40px;
@@ -265,7 +333,7 @@ h1.projects-h1 {
 h3.projects-h3 {
     font-family: 'NATS', sans-serif;
     font-size: 30px;
-    color: #303030;
+    color: #999999;
     margin-top: 0;
     margin-bottom: 1em;
 
@@ -279,15 +347,15 @@ h3.projects-h3 {
     max-width: 60em;
     line-height: 3;
     font-family: "Lustria", serif;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .project_detail_text_mini {
-    max-width: 35ch;
+    max-width: 40ch;
     line-height: 3;
     padding-top: 5em;
     font-family: "Lustria", serif;
-    font-size: 18px;
+    font-size: 20px;
 
     text-align: center;
     margin-left: auto;
@@ -304,7 +372,9 @@ h3.projects-h3 {
     width: 20em;
     height: auto;
     margin: 0 auto;
+    margin-bottom: 4em;
     display: block;
+
 }
 
 .ccl-clients-image {
@@ -315,6 +385,12 @@ h3.projects-h3 {
 
 .wireframe {
     columns: 4;
+}
+
+.wireframe img {
+    /* width: 95%; */
+    padding-left: 0.5em;
+    padding-right: 0.5em;
 }
 
 .wireframe-heading {
@@ -368,7 +444,8 @@ h3.projects-h3 {
     border-bottom: 1px solid var(--bs-grey);
     width: 95%;
     padding: 2% 0;
-    margin: 2em auto;
+    margin: 1em auto;
+    margin-bottom: 3.5em;
 }
 
 .projects-line-mini {
@@ -454,11 +531,11 @@ h3.projects-h3 {
 /* --------- FOOTER (includes footer icons) --------- */
 footer {
     background-color: var(--bs-primary);
-    /* Optional: Change footer text color to white using variable */
+
     color: var(--bs-dark);
-    /* Optional: Center footer elements */
+
     width: 100%;
-    height: 4rem;
+    height: 6em;
 
 }
 
@@ -486,8 +563,9 @@ footer {
 }
 
 .copyright {
-    padding-top: 1rem;
+    padding-top: 2.5rem;
     font-size: 12px;
+
 }
 
 footer .footer-social {
