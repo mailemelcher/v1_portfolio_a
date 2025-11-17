@@ -143,8 +143,9 @@ body {
     border-radius: 5px;
     padding: 0.5rem 1.5rem;
     font-family: 'NATS', sans-serif;
+    text-transform: uppercase;
     font-weight: 550;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.12em;
     text-align: center;
     cursor: pointer;
     transition: filter 0.3s;
@@ -168,10 +169,10 @@ body {
 
 
 /* --------- ICONS --------- */
-/* Home Page icons */
+/* Home Page "technical skills" icons */
 .icons,
 .skill-icons {
-    width: 75%;
+    width: 80%;
     columns: 2;
 }
 
@@ -181,7 +182,7 @@ body {
     /* padding-bottom: 3em; */
 }
 
-/* About Page icons */
+/* About Page hobby icons */
 .hobby-icons {
     columns: 2;
     padding: 0 1em;
@@ -189,11 +190,13 @@ body {
     width: 60%;
 }
 
-/* Projects Page icons */
+/* Projects Page "programs used" icons */
 .ccl-icons img {
     width: 35%;
     padding: 1em
 }
+
+
 
 
 /* --------- NAVIGATION BAR (ALL OTHER PAGES) --------- */
@@ -289,7 +292,6 @@ body {
 
 .hero-section>.row {
     margin: 0;
-    /* removes default row spacing */
 }
 
 .hero-section>.row>* {
@@ -315,7 +317,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* vertical centering */
+
     background-color: var(--bs-primary);
     gap: 2rem;
     /* spacing between logo and button */
@@ -358,6 +360,12 @@ body {
     margin: 0;
 }
 
+.small-text {
+    font-size: 15px;
+    font-family: "Lustria", serif;
+    color: #303030
+}
+
 .leftquote {
     font-size: 3em;
 }
@@ -369,7 +377,9 @@ body {
 
 
 
-/* --------- ABOUT ---------- */
+
+
+/* ------------ ABOUT ------------- */
 .about-photo-section {
     margin-top: 1rem;
     margin-bottom: 2rem;
@@ -395,7 +405,9 @@ body {
 
 
 
-/*  ------  PROJECTS ------  */
+
+
+/*  ----------  PROJECTS ----------  */
 .projects,
 section.projects {
     margin: 0 2em;
@@ -525,6 +537,8 @@ h3.projects-h3 {
 
 
 
+
+
 /* --------- FOOTER (includes footer icons) --------- */
 footer {
     background-color: var(--bs-primary);
@@ -532,7 +546,7 @@ footer {
     color: var(--bs-dark);
 
     width: 100%;
-    height: 6em;
+    height: 7em;
 }
 
 .footer_list {
@@ -540,7 +554,7 @@ footer {
     list-style: none;
     display: flex;
     gap: 30%;
-    padding-right: 2rem;
+    /* padding-right: 2rem; */
     align-items: center;
 }
 
@@ -567,10 +581,40 @@ footer .footer-social {
 .copyright {
     padding-top: 2.5rem;
     font-size: 12px;
+    color: #FFFFFF;
 
 }
 
 
+
+
+
+
+
+
+/********************************
+Helpers
+**********************************/
+
+.caps {
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+}
+
+
+
+/* ------ TEXT ALIGNMENT ------ */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
 
 
 
@@ -682,29 +726,7 @@ svg {
 
 
 
-/* ------ TEXT ALIGNMENT ------ */
-.text-centered {
-    text-align: center;
-}
 
-.text-left {
-    text-align: left;
-}
-
-.text-right {
-    text-align: right;
-}
-
-
-/********************************
-Helpers
-**********************************/
-
-.caps {
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    /* optional spacing */
-}
 
 
 
