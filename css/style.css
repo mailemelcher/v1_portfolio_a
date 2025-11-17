@@ -11,6 +11,7 @@ Bootstrap Variables Override
     --bs-white: #FFFFFF;
     --bs-grey: #303030;
     --bs-black: #000000;
+    --bs-dark-grey: #999999;
     --bs-light-grey: #E3E2E2;
     --bs-light-pink: #d8bfbf;
 
@@ -68,6 +69,10 @@ Global Styles and UI Components
     color: var(--bs-grey);
 }
 
+.dark-grey {
+    color: var(--bs-dark-grey);
+}
+
 .light-grey {
     color: var(--bs-light-grey);
 }
@@ -93,8 +98,8 @@ body {
 
 /* ------ ______ LINE ------ */
 .homepage-line {
-    border-top: 1px solid var(--bs-grey);
-    border-bottom: 1px solid var(--bs-grey);
+    border-top: 1px solid var(--bs-dark-grey);
+    border-bottom: 1px solid var(--bs-dark-grey);
     width: 95%;
     padding: 20% 0;
     margin: 3em 0;
@@ -109,8 +114,8 @@ body {
 
 .projects-line {
     /*note: width size changes width size of icons/imgs using the code */
-    border-top: 1px solid var(--bs-grey);
-    border-bottom: 1px solid var(--bs-grey);
+    border-top: 1px solid var(--bs-dark-grey);
+    border-bottom: 1px solid var(--bs-dark-grey);
     width: 95%;
     padding: 2% 0;
     margin: 1em auto;
@@ -118,8 +123,8 @@ body {
 }
 
 .projects-line-mini {
-    border-top: 1px solid var(--bs-grey);
-    border-bottom: 1px solid var(--bs-grey);
+    border-top: 1px solid var(--bs-dark-grey);
+    border-bottom: 1px solid var(--bs-dark-grey);
     width: 90%;
     padding: 5% 0;
     margin: 5em auto;
@@ -135,9 +140,11 @@ body {
 
 
 /* ------- PINK BUTTON ------- */
+
+/* All pink buttons */
 .btn-pink {
     background-color: var(--bs-accent);
-    /* original pink */
+
     color: #FFFFFF;
     border: none;
     border-radius: 5px;
@@ -149,18 +156,43 @@ body {
     text-align: center;
     cursor: pointer;
     transition: filter 0.3s;
-    /* smooth hover effect */
+
 }
 
 .btn-pink:hover {
     background-color: var(--bs-light-pink)
-        /* manually lighter pink */
 }
 
+
+/* Footer pink button */
+.footer-btn-pink {
+    background-color: var(--bs-accent);
+
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 2rem;
+    font-family: 'NATS', sans-serif;
+    text-transform: uppercase;
+    font-weight: 550;
+    letter-spacing: 0.10em;
+    text-align: center;
+    cursor: pointer;
+    transition: filter 0.3s;
+    white-space: nowrap;
+    /* doesn't create two lines of txt just one */
+}
+
+.footer-btn-pink:hover {
+    background-color: var(--bs-light-pink)
+}
+
+
+/* linkedin button link found on About page*/
 .btn-icon {
     width: 17px;
     height: auto;
-    /* maintains original aspect ratio */
+
     margin-right: 8px;
     /* space between icon and text */
 }
@@ -360,19 +392,52 @@ body {
     margin: 0;
 }
 
+
+.recommendation-small-text {
+    font-size: 15px;
+    font-family: "Lustria", serif;
+    color: #303030;
+    display: flex;
+    text-align: center;
+    line-height: 2em;
+}
+
+.irene-small-text {
+    font-size: 15px;
+    font-family: "Lustria", serif;
+    color: #FFFFFF;
+    margin: -0.2em;
+}
+
 .small-text {
     font-size: 15px;
     font-family: "Lustria", serif;
-    color: #303030
+    color: #303030;
 }
 
 .leftquote {
-    font-size: 3em;
+    width: 6%;
+    vertical-align: top;
+    margin-bottom: 1em;
 }
 
 .rightquote {
-    font-size: 5em;
+    width: 12%;
+    vertical-align: bottom;
+    padding-bottom: 2em;
+    margin: 0;
+    display: inline-block;
 }
+
+/* .leftquote {
+    margin-bottom: 1em;
+    width: 7%;
+}
+
+.rightquote {
+    padding-bottom: 2em;
+    width: 13%;
+} */
 
 
 
@@ -582,6 +647,7 @@ footer .footer-social {
     padding-top: 2.5rem;
     font-size: 12px;
     color: #FFFFFF;
+    white-space: nowrap;
 
 }
 
@@ -762,6 +828,12 @@ svg {
 
     /* -------------- G R I D S -------------- */
     /* COMMONLY USED SEMANTIC COLUMN WIDTHS */
+
+    .lowered-content {
+        padding-top: 3rem;
+
+    }
+
     .one-half {
         grid-column: auto / span 6;
     }
