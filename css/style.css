@@ -93,6 +93,7 @@ html,
 body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 
@@ -139,7 +140,7 @@ body {
 
 
 
-/* ------- PINK BUTTON ------- */
+/* ------- PINK + GREEN BUTTONS ------- */
 
 /* All pink buttons */
 .btn-pink {
@@ -160,7 +161,7 @@ body {
 }
 
 .btn-pink:hover {
-    background-color: var(--bs-light-pink)
+    filter: brightness(1.1);
 }
 
 
@@ -184,7 +185,7 @@ body {
 }
 
 .footer-btn-pink:hover {
-    background-color: var(--bs-light-pink)
+    filter: brightness(1.1);
 }
 
 
@@ -197,6 +198,29 @@ body {
     /* space between icon and text */
 }
 
+/* green "SEND" button on Contact page */
+.btn-green {
+    background-color: #9AB19B;
+    font: "NATS", sans-serif;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.7rem 1.5rem;
+    display: inline-block;
+    width: 15em;
+    font-family: 'NATS', sans-serif;
+    font-weight: 550;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.10em;
+    cursor: pointer;
+    transition: filter 0.3s;
+
+}
+
+.btn-green:hover {
+    filter: brightness(1.1);
+}
 
 
 
@@ -225,7 +249,8 @@ body {
 /* Projects Page "programs used" icons */
 .ccl-icons img {
     width: 35%;
-    padding: 1em
+    padding: 1em;
+    columns: 2;
 }
 
 
@@ -286,6 +311,8 @@ body {
 /* home | On hover */
 .home_navbar_menu li a:hover {
     color: var(--bs-secondary);
+    transform: translateY(-3px);
+    /* moves up 5px */
 }
 
 /* home | Active page link */
@@ -297,6 +324,8 @@ body {
 /* other pages | On hover */
 .navbar_menu li a:hover {
     color: var(--bs-secondary);
+    transform: translateY(-3px);
+    /* moves up 5px */
 }
 
 /* other pages | Active page link */
@@ -605,7 +634,69 @@ h3.projects-h3 {
 
 
 
+
+/* ---------------- CONTACT ----------------- */
+
+.contact-main-logo {
+    width: 100%;
+    /* max-width: 50em; */
+    padding: 4.5em;
+    margin-top: 6em;
+    margin-bottom: 4em;
+    /* ^^^ NOTE: Controls the "base" sizing of the contact section due to this element */
+    padding-left: 5em;
+    height: auto;
+}
+
+/* email form */
+.contact-email-form {
+    display: flex;
+    justify-content: center;
+    margin: 4rem 0;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 25em;
+    display: flex;
+    flex-direction: column;
+    margin-top: 6em;
+    margin-bottom: 4em;
+    gap: 1rem;
+
+}
+
+.contact-form label {
+    font-family: 'Lustria', serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.5rem 1rem;
+    font-family: 'Lustria', serif;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    resize: vertical;
+    /* allows vertical resizing only */
+}
+
+.contact-form textarea {
+    min-height: 120px;
+}
+
+
+
+
+
+
+
 /* --------- FOOTER (includes footer icons) --------- */
+
 footer {
     background-color: var(--bs-primary);
 
