@@ -683,11 +683,23 @@ h3.projects-h3 {
     letter-spacing: 1px;
     resize: vertical;
     /* allows vertical resizing only */
+
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #C8A7A7;
+    /* your green */
+    outline: none;
+    /* removes default blue/black outline */
+    box-shadow: 0 0 0 2px #9AB19B40;
+    /* optional soft glow, 25% opacity */
 }
 
 .contact-form textarea {
     min-height: 120px;
 }
+
 
 
 
