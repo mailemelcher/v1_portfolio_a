@@ -97,6 +97,8 @@ body {
 }
 
 
+
+
 /* ------ ______ LINE ------ */
 .homepage-line {
     border-top: 1px solid var(--bs-dark-grey);
@@ -165,6 +167,88 @@ body {
 }
 
 
+/* "Get in Touch" contact button on contact page */
+.contact-right .contact-btn-pink {
+    display: block;
+    /* ensures it sits on its own line */
+    margin: 1rem auto;
+    /* top margin stays, left/right auto = centered */
+}
+
+.contact-right a {
+    text-decoration: none;
+    /* removes underline */
+    color: inherit;
+    /* keeps button text color */
+}
+
+.contact-btn-pink {
+    background-color: var(--bs-accent);
+
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1.5rem;
+    margin-top: 0.5em;
+    font-family: 'NATS', sans-serif;
+    text-transform: uppercase;
+    font-weight: 550;
+    letter-spacing: 0.12em;
+    text-align: center;
+    cursor: pointer;
+    transition: filter 0.3s;
+
+}
+
+.contact-btn-pink:hover {
+    filter: brightness(1.1);
+}
+
+
+/* About + Contact skill tag pink button */
+.contact-tag-pink {
+    background-color: var(--bs-accent);
+    color: #000000;
+    border: none;
+    border-radius: 20px;
+    padding: 0.2em 1em;
+    margin-bottom: 1rem;
+    font-family: 'NATS', sans-serif;
+    font-weight: 550;
+    letter-spacing: 0.05em;
+    text-align: center;
+    transition: filter 0.3s;
+    align-items: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+
+}
+
+.contact-tag-pink.long-text-btn {
+    background-color: var(--bs-accent);
+    color: #000000;
+    border: none;
+    border-radius: 20px;
+    padding: 0.2em 2.5em;
+    margin-bottom: 1rem;
+    font-family: 'NATS', sans-serif;
+    font-weight: 550;
+    letter-spacing: 0.05em;
+    text-align: center;
+    transition: filter 0.3s;
+    align-items: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+
+}
+
+.star1-btn-icon {
+    width: 15px;
+    height: 15px;
+    margin-right: 0.5em;
+}
+
+
 /* Footer pink button */
 .footer-btn-pink {
     background-color: var(--bs-accent);
@@ -224,6 +308,9 @@ body {
 
 
 
+
+
+
 /* --------- ICONS --------- */
 /* Home Page "technical skills" icons */
 .icons,
@@ -252,6 +339,8 @@ body {
     padding: 1em;
     columns: 2;
 }
+
+
 
 
 
@@ -474,29 +563,83 @@ body {
 
 
 /* ------------ ABOUT ------------- */
-.about-photo-section {
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+.about-green-bg {
+    background-color: var(--bs-primary);
+    /* display: flex;
+    /* flex-direction: column;
+    justify-content: center; */
+    /* align-items: center; */
 }
 
+.about-green-bg p {
+    width: 70em;
+
+}
+
+/* About Photo */
 .about-photo {
-    border-radius: 0px;
-    /* optional — adds a soft curve to match your aesthetic */
-    display: block;
-    margin: 0 auto;
+    margin: 0em 2em;
+    width: 70%;
+}
+
+.about-photo-section {
+    margin-top: 8rem;
+    margin-bottom: 0;
+}
+
+.about-text {
+    color: #000000;
+    font: 'Lustria', serif;
+    line-height: 2em;
+
+}
+
+.about-text-fancy {
+    color: #000000;
+    font-family: 'NATS', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin-top: 1em;
+}
+
+.about-text-inspo {
+    color: #303030;
+    font: 'Lustria', serif;
 }
 
 
-
+/* linkedin button */
 .btn-link {
-    /* linkedin button */
+
     display: flex;
     justify-content: space-between;
     flex-direction: column;
 }
 
 
+/* Hobbies + Buttons section */
+.hobbies-section {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
 
+.hobbies-section .one-third {
+    flex: 1;
+    min-width: 200px;
+    /* ensures they stack nicely on smaller screens */
+}
+
+/* Button column */
+.buttons-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* centers buttons vertically */
+    gap: 1rem;
+    /* spacing between buttons */
+}
 
 
 
@@ -544,6 +687,7 @@ h1.projects-h1 {
 /* Project Subtitle - H3 */
 h3.projects-h3 {
     font-family: 'NATS', sans-serif;
+    text-transform: uppercase;
     font-size: 30px;
     color: #999999;
     margin-top: 0;
@@ -637,14 +781,19 @@ h3.projects-h3 {
 
 /* ---------------- CONTACT ----------------- */
 
+body.contact-page {
+    background-color: var(--bs-primary);
+}
+
 .contact-main-logo {
     width: 100%;
     /* max-width: 50em; */
-    padding: 4.5em;
-    margin-top: 6em;
-    margin-bottom: 4em;
+    padding-right: 0em;
+    padding-top: 4em;
+    margin-top: 6.5em;
+    margin-bottom: 2em;
     /* ^^^ NOTE: Controls the "base" sizing of the contact section due to this element */
-    padding-left: 5em;
+    padding-left: 8em;
     height: auto;
 }
 
@@ -652,7 +801,7 @@ h3.projects-h3 {
 .contact-email-form {
     display: flex;
     justify-content: center;
-    margin: 4rem 0;
+    margin-top: 5em;
 }
 
 .contact-form {
@@ -661,15 +810,17 @@ h3.projects-h3 {
     display: flex;
     flex-direction: column;
     margin-top: 6em;
-    margin-bottom: 4em;
-    gap: 1rem;
+    /* margin-bottom: 0em; */
+    /* ^^^ NOTE: Controls the "base" sizing of the contact section due to this element */
+    gap: 1.3rem;
 
 }
 
 .contact-form label {
     font-family: 'Lustria', serif;
+    color: var(--bs-white);
     font-size: 18px;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     font-weight: 600;
 }
 
@@ -678,7 +829,8 @@ h3.projects-h3 {
     padding: 0.5rem 1rem;
     font-family: 'Lustria', serif;
     font-size: 15px;
-    border: 1px solid #ccc;
+    border: 0px solid var(--bs-light-grey);
+    background-color: var(--bs-secondary);
     border-radius: 5px;
     letter-spacing: 1px;
     resize: vertical;
@@ -689,7 +841,7 @@ h3.projects-h3 {
 .contact-form input:focus,
 .contact-form textarea:focus {
     border-color: #C8A7A7;
-    /* your green */
+
     outline: none;
     /* removes default blue/black outline */
     box-shadow: 0 0 0 2px #9AB19B40;
@@ -700,8 +852,175 @@ h3.projects-h3 {
     min-height: 120px;
 }
 
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--bs-light-grey);
+}
+
+.follow-me-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0rem;
+}
+
+.contact-social-icons {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-social-icons li a img {
+    width: 35px;
+    height: 35px;
+
+}
+
+h3.contact-h3 {
+    font-family: 'NATS', sans-serif;
+    text-transform: uppercase;
+    font-size: 25px;
+    color: #FFFFFF;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0.8em;
+    white-space: nowrap;
+}
+
+h3.contact-projects-h3 {
+    font-family: 'NATS', sans-serif;
+    text-transform: uppercase;
+    font-size: 25px;
+    color: #FFFFFF;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0em;
+    white-space: nowrap;
+}
+
+.contact-info {
+    padding: 5em;
+    margin-top: 5.5em;
+    margin-bottom: 0em;
+    /* ^^^ NOTE: Controls the "base" sizing of the contact section due to this element */
+    padding-left: 0em;
+}
+
+.contact-info-row2 {
+    display: flex;
+    justify-content: flex-start;
+    /* keeps columns apart */
+    gap: 5rem;
+    /* space between columns */
+}
+
+.contact-left,
+.contact-right {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    /* spacing between headings */
+}
 
 
+
+
+/* pink skill tags in Contact Page */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    /* spacing between buttons */
+}
+
+.skill-tags .contact-tag-pink {
+    flex: 0 1 calc(33.33% - 0.5rem);
+    /* 3 per row, accounting for gap */
+    max-width: 100%;
+    text-align: center;
+}
+
+
+
+/* Project Links on Contact Page */
+.contact-right .project-links p {
+    margin: 0.5rem 0;
+    color: white;
+    font-family: 'NATS', sans-serif;
+    font-size: 16px;
+}
+
+.project-links-columns {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0rem;
+    width: 90%;
+}
+
+.project-links-columns>.contact-project-btn-pink-placement {
+    width: 100%;
+    padding-right: 5em;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-project-column {
+    flex: 1;
+    min-width: 150px;
+}
+
+.contact-project-column p {
+    /* margin: 0.25rem 0; */
+    white-space: nowrap;
+    /* font-family: 'Lustria', serif; */
+    /* font-size: 16px; */
+}
+
+.contact-right ul.project-links {
+    list-style: none;
+    padding-left: 0.5em;
+    margin-left: 0;
+}
+
+.contact-right ul.project-links p {
+    margin: 0;
+    color: white;
+}
+
+/* .projects-links {
+    list-style: none;
+    /* removes bullets */
+/* padding: 0;
+margin-top: 0rem;
+} */
+
+*/ .projects-links li {
+    margin-bottom: 0.5rem;
+    /* spacing between links */
+}
+
+.projects-links a {
+    text-decoration: none;
+    /* removes underline */
+    color: var(--bs-secondary);
+    /* pink color to match your theme */
+    font-family: 'NATS', sans-serif;
+    font-weight: 550;
+    transition: color 0.3s;
+}
+
+.projects-links a:hover {
+    color: var(--bs-accent);
+    /* green on hover */
+}
+
+/* Get in Touch Button */
 
 
 
@@ -757,6 +1076,13 @@ footer .footer-social {
 
 }
 
+.contact-copyright {
+    padding-top: 4rem;
+    font-size: 12px;
+    color: #FFFFFF;
+    white-space: nowrap;
+    text-align: center;
+}
 
 
 
@@ -939,6 +1265,9 @@ svg {
         padding-top: 10rem;
 
     } */
+    .one-fifth {
+        grid-column: span 5;
+    }
 
     .one-half {
         grid-column: auto / span 6;
@@ -959,6 +1288,7 @@ svg {
     .three-fourths {
         grid-column: auto / span 9;
     }
+
 
     /* 12 COLUMN CLASSES */
     .col-1 {
